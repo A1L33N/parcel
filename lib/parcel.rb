@@ -40,9 +40,9 @@ class Parcel
       size_cost = 20
     end
 
-    #weight_cost = @weight.*(.1)
+    weight_cost = @weight.*(0.1)
 
-    cost = cost.+(size_cost)
+    cost = (cost.+(size_cost)).+(weight_cost)
 
 
 

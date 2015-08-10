@@ -23,9 +23,9 @@ describe(Parcel) do
       expect(test_parcel.cost_to_ship()).to(eq(10))
     end
 
-    #it("factors parcel weight into cost") do
-    #  test_parcel = Parcel.new(5, 5, 5, 10)
-    #  expect(test_parcel.cost_to_ship()).to(eq(15))
+    it("factors parcel weight into cost") do
+      test_parcel = Parcel.new(5, 5, 5, 10)
+      expect(test_parcel.cost_to_ship()).to(eq(6))
     end
   end
 end
