@@ -46,10 +46,21 @@ class Parcel
       size_cost = 20
     end
 
+    if @delivery_type.==("normal")
+      delivery_cost = 0
+
+    elsif @delivery_type.==("fast")
+      delivery_cost = 10
+
+    else @delivery_type.==("overnight")
+      delivery_cost = 20
+
+    end
+
     weight_cost = @weight.*(0.1)
     distance_cost = @distance.*(0.01)
 
-    cost = ((cost.+(size_cost)).+(weight_cost)).+(distance_cost)
+    cost = (((cost.+(size_cost)).+(weight_cost)).+(distance_cost)).+(delivery_cost)
 
 
 
